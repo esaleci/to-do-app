@@ -1,0 +1,122 @@
+"use client"
+
+import type { Todo } from "./types"
+
+export const initialTodos: Todo[] = [
+  {
+    id: "1",
+    title: "Create a Next.js app",
+    description: "Scaffold with TypeScript + Tailwind and confirm it runs locally.",
+    completed: true,
+    dueAt: "2026-01-16T09:00",
+    attachments: [],
+  },
+  {
+    id: "2",
+    title: "Add shadcn/ui + dark theme",
+    description: "Initialize shadcn, set up theme provider, and verify dark mode.",
+    completed: true,
+    dueAt: "2026-01-16T10:30",
+    attachments: [],
+  },
+  {
+    id: "3",
+    title: "Build a mock-data to-do list",
+    completed: false,
+    dueAt: "2026-01-16T15:00",
+    attachments: [],
+  },
+  {
+    id: "4",
+    title: "Yesterday: review requirements",
+    completed: true,
+    dueAt: "2026-01-15T11:15",
+    attachments: [],
+  },
+  {
+    id: "5",
+    title: "Yesterday: sketch UI layout",
+    completed: true,
+    dueAt: "2026-01-15T17:45",
+    attachments: [],
+  },
+  {
+    id: "6",
+    title: "Today: add attachments support",
+    completed: false,
+    dueAt: "2026-01-16T18:20",
+    attachments: [],
+  },
+  {
+    id: "7",
+    title: "Tomorrow: QA the filters",
+    description: "Test date-only, time-only, exact, and between behaviors.",
+    completed: false,
+    dueAt: "2026-01-17T08:05",
+    attachments: [],
+  },
+  {
+    id: "8",
+    title: "Tomorrow: polish summary cards",
+    completed: false,
+    dueAt: "2026-01-17T13:30",
+    attachments: [],
+  },
+  {
+    id: "9",
+    title: "Tomorrow: write small UX notes",
+    completed: false,
+    dueAt: "2026-01-17T20:10",
+    attachments: [],
+  },
+  {
+    id: "10",
+    title: "This weekend: add more mock tasks",
+    completed: false,
+    dueAt: "2026-01-18T10:00",
+    attachments: [],
+  },
+  {
+    id: "11",
+    title: "This weekend: check time-only filter",
+    completed: false,
+    dueAt: "2026-01-18T22:15",
+    attachments: [],
+  },
+  {
+    id: "12",
+    title: "Next week: sync with team",
+    completed: false,
+    dueAt: "2026-01-19T09:30",
+    attachments: [],
+  },
+  {
+    id: "13",
+    title: "Next week: test date-only filter",
+    completed: false,
+    dueAt: "2026-01-20T14:05",
+    attachments: [],
+  },
+  {
+    id: "14",
+    title: "Next week: test exact date+time filter",
+    completed: false,
+    dueAt: "2026-01-21T12:00",
+    attachments: [],
+  },
+  {
+    id: "15",
+    title: "Next week: attach docs to completed tasks",
+    completed: false,
+    dueAt: "2026-01-22T16:40",
+    attachments: [],
+  },
+  {
+    id: "16",
+    title: "Next week: final review",
+    completed: false,
+    dueAt: "2026-01-23T11:00",
+    attachments: [],
+  },
+]
+
