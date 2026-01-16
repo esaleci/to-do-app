@@ -13,6 +13,9 @@ import { zodResolver } from "@hookform/resolvers/zod"
 
 import { authSchema, type AuthValues } from "./schemas"
 
+const DEMO_EMAIL = "esaleci@gmail.com"
+const DEMO_PASSWORD = "ToDo@PPV1"
+
 export function AuthCard({ onAuthed }: { onAuthed: () => void }) {
   const [mode, setMode] = React.useState<"sign_in" | "sign_up">("sign_in")
   const [busy, setBusy] = React.useState(false)
@@ -62,6 +65,31 @@ export function AuthCard({ onAuthed }: { onAuthed: () => void }) {
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
+          {mode === "sign_in" && (
+            <div className="rounded-lg border bg-muted/40 px-3 py-3 text-sm">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="font-medium">Demo credentials</p>
+                  <p className="text-muted-foreground mt-1 break-words">
+                    Email: <code>{DEMO_EMAIL}</code>
+                    <br />
+                    Password: <code>{DEMO_PASSWORD}</code>
+                  </p>
+                </div>
+                <Button
+                  type="button"
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => {
+                    form.setValue("email", DEMO_EMAIL, { shouldDirty: true })
+                    form.setValue("password", DEMO_PASSWORD, { shouldDirty: true })
+                  }}
+                >
+                  Use demo
+                </Button>
+              </div>
+            </div>
+          )}
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3" noValidate>
               <FormField
@@ -70,7 +98,7 @@ export function AuthCard({ onAuthed }: { onAuthed: () => void }) {
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input placeholder="Email" autoComplete="email" {...field} />
+                      <Input placeholder="Enter your email" autoComplete="email" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
